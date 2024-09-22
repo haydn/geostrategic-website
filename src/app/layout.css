@@ -1,0 +1,103 @@
+@import url("https://unpkg.com/@haydn/universal@0.0.2/universal.css");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+.logo {
+  color: currentColor;
+  display: grid;
+  font-size: 32px;
+  font-weight: bold;
+  gap: 8px;
+  grid-template-columns: auto 1fr;
+  line-height: 34px;
+  text-decoration: none;
+}
+
+:root {
+  --color-canvas: light-dark(oklch(74% 0.02 145), oklch(26% 0.02 145));
+  color-scheme: dark light;
+}
+
+body {
+  background: var(--color-canvas);
+  color: light-dark(oklch(0% 0 0), oklch(100% 0 0));
+  font: normal 400 16px / 24px "Courier Prime", ui-monospace, Menlo, Monaco,
+    "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono",
+    "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono",
+    "Courier New", monospace;
+}
+
+body {
+  display: grid;
+  grid-template-columns: minmax(0, 80ch);
+  justify-content: center;
+  padding: 3lh 1lh;
+  gap: 3lh;
+}
+
+header {
+  display: grid;
+  place-content: center;
+}
+
+main {
+  --color-canvas: light-dark(oklch(100% 0 0), oklch(18% 0 0));
+  background: var(--color-canvas);
+  border-radius: 8px;
+  color: light-dark(black, oklch(90% 0 0));
+}
+
+main {
+  padding: 1lh;
+  display: grid;
+  gap: 0.5lh;
+}
+
+main h2 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+main * + h2 {
+  margin-top: 24px;
+}
+
+main h3 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+}
+
+main * + h3 {
+  margin-top: 18px;
+}
+
+main a {
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+main a:hover {
+  text-decoration: none;
+}
+
+main :where(ul, ol) {
+  padding-left: 4ch;
+}
+
+main :where(ul, ol) li {
+  display: list-item;
+}
+
+main ul li {
+  list-style: disc;
+}
+
+main ol li {
+  list-style: decimal;
+}
+
+main strong {
+  font-weight: bold;
+}
